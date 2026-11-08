@@ -1,0 +1,1362 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("img/background3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #080808;
+    color: #F5F5F5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body,
+header,
+nav,
+main,
+section,
+footer,
+p,
+h1,
+h2,
+h3,
+a,
+button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.gold {
+    color: #F8C828;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 8px 40px 2px;
+    margin: 0;
+    color: #F5F5F5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header .namelogo {
+    width: 45px;
+    height: 45px;
+    float: none;
+    margin-left: -10px;
+    margin-bottom: 0;
+}
+
+.white {
+    color: #f5f5f5
+}
+
+.topletters {
+    margin: 0 0 0 15px;
+    margin-left: 15px;
+    margin-right: auto;
+}
+
+nav {
+    margin-left: auto;
+}
+
+.navlinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navlinks a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    color: #FFFFFF;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navlinks a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F8C828;
+    transition: width 0.3s ease;
+}
+
+.navlinks a:hover,
+.navlinks a:focus-visible {
+    color: #F8C828;
+    text-decoration: none;
+}
+
+.navlinks a:hover::after,
+.navlinks a:focus-visible::after {
+    width: 100%;
+}
+
+hr.hr1 {
+    height: 1px;
+    margin: 0;
+    border: none;
+    background-color: #F8C828;
+    opacity: 1;
+}
+
+.mainsection {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 25px 40px;
+    color: #F8C828;
+}
+
+#name {
+    margin: 0 0 15px;
+    color: #F5F5F5;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.mainsection h3 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.mainsection p {
+    max-width: 850px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.cyberpic {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 20px 15px 20px 0;
+}
+
+.resumebtn {
+    display: inline-block;
+    padding: 12px 35px;
+    border: 2px solid #F8C828;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #F8C828;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.resumebtn:hover {
+    background-color: #F8C828;
+    color: #080808;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(248, 200, 40, 0.4);
+}
+
+.aboutsection {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 10px auto 50px;
+    padding: 40px;
+    color: #FFFFFF;
+}
+
+.abouttext {
+    flex: 1;
+    min-width: 0;
+    padding-right: 40px;
+    border-right: 1px solid #F8C828;
+}
+
+.aboutdetails {
+    flex: 1;
+    min-width: 0;
+}
+
+.aboutsection h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.aboutsection h3 {
+    margin-bottom: 10px;
+    color: #F8C828;
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.aboutsection p {
+    color: #E0E0E0;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.aboutdetails p {
+    margin-bottom: 30px;
+}
+
+.picturelogo {
+    width: 200px;
+    height: 200px;
+    margin-left: 80px;
+    object-fit: contain;
+    display: block;
+    margin: 40px auto 0;
+}
+
+.projects-section {
+    max-width: 1200px;
+    margin: 10px auto 50px;
+    padding: 10px 40px 40px;
+    color: #F5F5F5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.projects-section h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #F8C828;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.projects-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    min-width: 0;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 25px;
+    background-color: #111111;
+    border: 1px solid #B58C24;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.featured-project {
+    padding: 35px;
+    border: 2px solid #F8C828;
+    background: linear-gradient(
+        135deg,
+        #181407,
+        #080808
+    );
+}
+
+.project-number {
+    color: #B58C24;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: #F8C828;
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.featured-project h3 {
+    font-size: 28px;
+}
+
+.project-card p {
+    color: #CCCCCC;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-tools {
+    color: #F8C828 !important;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.project-link {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    color: #F8C828;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.project-link:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.project-card:hover {
+    border-color: #F8C828;
+    box-shadow: 0 0 15px rgba(248, 200, 40, 0.3);
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 900px) {
+
+    .projects-section {
+        padding: 20px 30px 40px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-right {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .projects-section {
+        padding: 15px 20px 30px;
+    }
+
+    .projects-section h2 {
+        font-size: 24px;
+    }
+
+    .projects-right {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card,
+    .featured-project {
+        padding: 20px;
+    }
+
+    .featured-project h3 {
+        font-size: 23px;
+    }
+
+    .project-card:hover {
+        transform: none;
+    }
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 25px;
+    margin-left: -15px;
+    padding: 5px 10px 0px;
+    border-top: 1px solid #F8C828;
+    color: #FFFFFF;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    transform: translateY(15px);
+}
+
+.footer-logo {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+.footer-text p {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.footer-text span {
+    display: block;
+    margin: 0;
+    color: #F8C828;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.3;
+}
+
+.copyright {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #F5F5F5;
+    font-size: 12px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+
+
+.social-icons {
+    margin-right: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+.social-icons a {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    color: #F8C828;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+.resume-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 50px 60px;
+    color: #F5F5F5;
+}
+
+.resume-intro {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.resume-intro h1 {
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.resume-intro p {
+    color: #CCCCCC;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.resume-skills h2,
+.resume-work h2,
+.resume-education h2,
+.resume-pdf h2 {
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #F8C828;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: normal;
+}
+
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 25px 15px;
+    border: 1px solid #B58C24;
+    border-radius: 8px;
+    background-color: #111111;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.skill-card h3 {
+    margin-bottom: 12px;
+    color: #F8C828;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.skill-card p {
+    margin-bottom: 0;
+    color: #CCCCCC;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.skill-card:hover {
+    border-color: #F8C828;
+    box-shadow: 0 0 15px rgba(248, 200, 40, 0.3);
+    transform: translateY(-5px);
+}
+
+.resume-work,
+.resume-education {
+    margin-top: 60px;
+}
+
+.work-card,
+.education-card {
+    padding: 25px;
+    border: 1px solid #B58C24;
+    border-left: 4px solid #F8C828;
+    border-radius: 8px;
+    background-color: #111111;
+}
+
+.work-card h3,
+.education-card h3 {
+    margin-bottom: 12px;
+    color: #F8C828;
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.work-card p,
+.education-card p {
+    color: #CCCCCC;
+    line-height: 1.7;
+}
+
+.resume-pdf {
+    margin: 60px 0 40px;
+    text-align: center;
+}
+
+.resume-pdf p {
+    margin-bottom: 25px;
+    color: #CCCCCC;
+}
+
+.resume-download {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 2px solid #F8C828;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #F8C828;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.resume-download:hover {
+    background-color: #F8C828;
+    color: #080808;
+    text-decoration: none;
+    box-shadow: 0 0 15px rgba(248, 200, 40, 0.4);
+}
+
+
+
+/* FIGHTING GAME INTERESTS PAGE */
+
+.fighter-page {
+    background: #050505;
+    color: white;
+    min-height: 100vh;
+}
+
+.fighter-select {
+    position: relative;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.fighter-select > input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+/* TITLE */
+
+.arena-top {
+    text-align: center;
+    padding: 35px 15px 15px;
+}
+
+.arena-top > p:first-child {
+    color: #F8C828;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+.arena-top h1 {
+    font-family: Impact, sans-serif;
+    font-size: clamp(28px, 5vw, 60px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: white;
+    
+}
+
+.arena-top h1 span {
+    color: #F8C828;
+}
+
+.arena-subtitle {
+    color: #F5F5F5;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+
+.fighter-stage {
+    height: 530px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 35% 70%,
+            rgba(248, 200, 40, 0.22), transparent 50%),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0 95px,
+            rgba(248, 200, 40, 0.035) 96px 97px
+        ),
+        linear-gradient(135deg, #1d1707, #050505 65%);
+    border-top: 1px solid #6d5619;
+    border-bottom: 3px solid #F8C828;
+}
+
+.fighter-stage::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(transparent, #050505);
+    pointer-events: none;
+}
+
+
+.fighter {
+    display: none;
+    position: absolute;
+    inset: 0;
+    animation: fighterEnter 0.45s ease;
+}
+
+/* Fighter img size */
+
+.fighter > img {
+    position: absolute;
+    bottom: -20px;
+    left: 5%;
+    width: 58%;
+    height: 105%;
+    object-fit: contain;
+    object-position: bottom center;
+    filter: drop-shadow(0 0 28px rgba(248, 200, 40, 0.4));
+}
+
+.fighter-anime > img {
+    width: 58%;
+    height: 100%;
+    left: 0%;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.fighter-lifestyle > img {
+    width: 58%;
+    height: 100%;
+    left: 0%;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.fighter-hacker > img {
+    width: 58%;
+    height: 100%;
+    left: 0%;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.fighter-gaming > img {
+    width: 58%;
+    height: 100%;
+    left: 0%;
+    bottom: 0;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.fighter-details {
+    position: absolute;
+    z-index: 2;
+    right: 6%;
+    top: 35%;
+    width: 35%;
+}
+
+.fighter-details span {
+    color: #F8C828;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.fighter-details h2 {
+    font-size: clamp(32px, 5vw, 65px);
+    font-weight: 900;
+    color: #F8C828;
+    margin: 12px 0;
+    text-shadow: 0 0 20px rgba(248, 200, 40, 0.3);
+}
+
+.fighter-details p {
+    color: #ddd;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.stage-decoration {
+    position: absolute;
+    right: 5%;
+    bottom: 20px;
+    font-size: 75px;
+    font-weight: 900;
+    color: rgba(248, 200, 40, 0.06);
+}
+
+
+.roster-area {
+    padding: 25px 20px 45px;
+    text-align: center;
+    background: #090909;
+}
+
+.roster-area > p:first-child {
+    color: #F8C828;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.fighter-roster {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin: 25px auto;
+    flex-wrap: wrap;
+}
+
+.fighter-roster label {
+    width: 120px;
+    height: 145px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #4d3c13;
+    background: linear-gradient(#28200e, #080808);
+    transition: 0.25s;
+}
+
+.fighter-roster label img {
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.fighter-roster label span {
+    display: block;
+    font-size: 11px;
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.fighter-roster label:hover {
+    transform: translateY(-10px) scale(1.04);
+    border-color: #F8C828;
+    box-shadow: 0 0 20px rgba(248, 200, 40, 0.4);
+}
+
+.roster-hint {
+    font-size: 11px;
+    color: #777;
+    letter-spacing: 2px;
+}
+
+#gaming:checked ~ .fighter-stage .fighter-gaming,
+#anime:checked ~ .fighter-stage .fighter-anime,
+#hacker:checked ~ .fighter-stage .fighter-hacker,
+#lifestyle:checked ~ .fighter-stage .fighter-lifestyle {
+    display: block;
+}
+
+
+#gaming:checked ~ .roster-area label[for="gaming"],
+#anime:checked ~ .roster-area label[for="anime"],
+#hacker:checked ~ .roster-area label[for="hacker"],
+#lifestyle:checked ~ .roster-area label[for="lifestyle"] {
+    border-color: #F8C828;
+    box-shadow: 0 0 22px rgba(248, 200, 40, 0.55);
+}
+
+/* CHARACTER ENTRANCE */
+
+@keyframes fighterEnter {
+    from {
+        opacity: 0;
+        transform: translateX(-45px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .fighter-stage {
+        height: 500px;
+    }
+
+    .fighter > img {
+        width: 100%;
+        height: 70%;
+        left: 0;
+        bottom: 0;
+        opacity: 0.75;
+    }
+
+    .fighter-details {
+        top: 5%;
+        right: 5%;
+        left: 5%;
+        width: 90%;
+        text-align: center;
+    }
+
+    .fighter-details p {
+        font-size: 13px;
+    }
+
+    .fighter-roster label {
+        width: 75px;
+        height: 105px;
+    }
+
+    .fighter-roster label img {
+        height: 77px;
+    }
+
+    .fighter-roster label span {
+        font-size: 9px;
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+    header,
+    footer {
+        padding: 15px 30px;
+    }
+
+    .navlinks {
+        gap: 20px;
+    }
+
+    .mainsection,
+    .aboutsection,
+    .resume-section {
+        padding: 30px;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .aboutsection {
+        gap: 25px;
+    }
+
+    .abouttext {
+        padding-right: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    header .namelogo {
+        float: left;
+    }
+
+    nav {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .navlinks {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .mainsection {
+        margin: 20px auto;
+        padding: 25px 20px;
+    }
+
+    #name {
+        font-size: 30px;
+    }
+
+    .mainsection h3 {
+        font-size: 19px;
+    }
+
+    .aboutsection {
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 25px 20px;
+    }
+
+    .abouttext,
+    .aboutdetails {
+        width: 100%;
+    }
+
+    .abouttext {
+        padding-right: 0;
+        padding-bottom: 25px;
+        border-right: none;
+        border-bottom: 1px solid #F8C828;
+    }
+
+    .resume-section {
+        padding: 35px 20px;
+    }
+
+    .resume-intro h1 {
+        font-size: 32px;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-brand {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 12px;
+    }
+
+    header .namelogo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .topletters {
+        font-size: 13px;
+    }
+
+    .navlinks {
+        gap: 12px;
+    }
+
+    .navlinks a {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    #name {
+        font-size: 26px;
+    }
+
+    .mainsection h3 {
+        font-size: 18px;
+    }
+
+    .mainsection p,
+    .aboutsection p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .cyberpic {
+        width: 75px;
+        height: 75px;
+    }
+
+    .resumebtn,
+    .resume-download {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .aboutsection h2 {
+        font-size: 24px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-intro h1 {
+        font-size: 28px;
+    }
+
+    .resume-intro p {
+        font-size: 14px;
+    }
+
+    .resume-skills h2,
+    .resume-work h2,
+    .resume-education h2,
+    .resume-pdf h2 {
+        font-size: 22px;
+    }
+
+    .work-card,
+    .education-card {
+        padding: 18px;
+    }
+
+    .footer-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-text p {
+        font-size: 15px;
+    }
+
+    .footer-text span {
+        font-size: 12px;
+    }
+
+    .social-icons {
+        gap: 20px;
+    }
+
+    .skill-card:hover {
+        transform: none;
+    }
+}
+
+.social-icons .material-icons {
+    position: relative;
+    top: 3px;
+}
+
+
+
+/* DONATE PAGE */
+
+.donate-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 25px 80px;
+    color: #FFFFFF;
+    font-family: "Courier New", monospace;
+}
+
+.donate-intro {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.donate-intro h1 {
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+.donate-intro h1 span,
+.terminal-content h2 span {
+    color: #F8C828;
+}
+
+.donate-intro p {
+    color: #CCCCCC;
+    margin-top: 15px;
+}
+
+/* TERMINAL */
+
+.donate-terminal {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #0D0D0D;
+    border: 1px solid #F8C828;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: #1A1A1A;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #554318;
+}
+
+.terminal-header p {
+    color: #F8C828;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.terminal-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #F8C828;
+}
+
+.terminal-dots span:nth-child(2) {
+    background: #B58C24;
+}
+
+.terminal-dots span:nth-child(3) {
+    background: #555555;
+}
+
+.terminal-content {
+    padding: 40px;
+}
+
+.terminal-command {
+    color: #F8C828;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.terminal-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.terminal-description {
+    color: #CCCCCC;
+    line-height: 1.9;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+.terminal-divider {
+    height: 1px;
+    background: #554318;
+    margin: 30px 0;
+}
+
+/* FORM */
+
+.form-heading {
+    color: #F8C828;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.title-options {
+    border: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.title-options legend {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.title-options label {
+    color: #CCCCCC;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.title-options input {
+    accent-color: #F8C828;
+    margin-right: 5px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px;
+    background: #151515;
+    color: #FFFFFF;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #F8C828;
+}
+
+.terms-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    color: #CCCCCC;
+    font-size: 13px;
+}
+
+.terms-group input {
+    accent-color: #F8C828;
+}
+
+.demo-warning {
+    color: #AAAAAA;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+
+.donate-button {
+    display: inline-block;
+    padding: 14px 25px;
+    background: #F8C828;
+    color: #080808;
+    border: none;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.donate-button:hover {
+    background: #FFFFFF;
+}
+
+/* STATUS & THANK YOU */
+
+.terminal-status {
+    color: #F8C828;
+    font-size: 12px;
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+
+.donate-thanks {
+    text-align: center;
+    color: #CCCCCC;
+    margin-top: 35px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .donate-page {
+        padding: 40px 15px 60px;
+    }
+
+    .donate-intro h1 {
+        font-size: 30px;
+    }
+
+    .terminal-content {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .terminal-content h2 {
+        font-size: 21px;
+    }
+}
